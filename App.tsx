@@ -71,11 +71,10 @@ const App = () => {
         <Header />
         <View
           style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            backgroundColor: isDarkMode ? Colors.red : Colors.white,
           }}>
           <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
+          Hi, I am a React Native app. I am running on a MacOS device!
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
