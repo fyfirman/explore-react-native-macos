@@ -29,7 +29,7 @@ import {
 
 const Section: React.FC<{
   title: string;
-}> = ({children, title}) => {
+}> = ({ children, title }) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -39,7 +39,8 @@ const Section: React.FC<{
           {
             color: isDarkMode ? Colors.white : Colors.black,
           },
-        ]}>
+        ]}
+      >
         {title}
       </Text>
       <Text
@@ -48,7 +49,8 @@ const Section: React.FC<{
           {
             color: isDarkMode ? Colors.light : Colors.dark,
           },
-        ]}>
+        ]}
+      >
         {children}
       </Text>
     </View>
@@ -67,14 +69,16 @@ const App = () => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
+        style={backgroundStyle}
+      >
         <Header />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.red : Colors.white,
-          }}>
+          }}
+        >
           <Section title="Step One">
-          Hi, I am a React Native app. I am running on a MacOS device!
+            Hi, I am a React Native app. I am running on a MacOS device!
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
@@ -105,9 +109,6 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
   },
 });
 
