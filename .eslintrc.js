@@ -6,7 +6,7 @@ module.exports = {
     'no-use-before-define': ['error', { variables: false }],
     'react-native/no-unused-styles': 'error',
     'react-native/split-platform-components': 'off',
-    'react-native/no-inline-styles': 'error',
+    'react-native/no-inline-styles': 'warn',
     'react-native/no-color-literals': 'error',
     'react/jsx-filename-extension': 'off',
     'prettier/prettier': ['error'],
@@ -18,5 +18,6 @@ module.exports = {
         prop: 'ignore',
       },
     ],
+    'react-hooks/exhaustive-deps': 'warn',
   },
 };
